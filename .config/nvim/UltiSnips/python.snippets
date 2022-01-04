@@ -1,0 +1,103 @@
+# import functions
+snippet ipd "importing pandas"
+import pandas as pd
+endsnippet
+
+snippet ipl "importing pathlib"
+from pathlib import Path
+endsnippet
+
+snippet ismf "importing smf"
+import statsmodels.formula.api as smf
+endsnippet
+
+# import functions
+snippet idot "importing dotenv"
+from dotenv import load_dotenv
+endsnippet
+
+# import functions
+snippet idt "importing datetime"
+import datetime as dt
+endsnippet
+
+snippet ide "importing dedent"
+from textwrap import dedent
+endsnippet
+
+snippet ice "importing create_engine"
+from sqlalchemy import create_engine
+endsnippet
+
+snippet ibs "importing bs4"
+from bs4 import BeautifulSoup as Soup
+import requests
+endsnippet
+
+snippet ipm "importing pymc3"
+import pymc3 as pm
+import arviz as az
+endsnippet
+
+snippet inp "importing numpy"
+import numpy as np
+endsnippet
+
+snippet irf "importing random forest"
+from sklearn.ensemble import RandomForestClassifier
+endsnippet
+
+snippet idf "importing dataframe, series"
+from pandas import DataFrame, Series
+endsnippet
+
+snippet iplt "importing plt"
+import matplotlib.pyplot as plt
+endsnippet
+
+snippet isns "importing seaborn"
+import seaborn as sns
+endsnippet
+
+snippet ipath "importing path"
+from os import path
+endsnippet
+
+# pandas IO
+# snippet rcsv "reading a csv"
+snippet ;r "reading a csv"
+$1 = pd.read_csv('$2.csv'$0)
+endsnippet
+
+snippet ;rp "reading a csv with path"
+$1 = pd.read_csv(path.join($2, '$3.csv')$0)
+endsnippet
+
+snippet wcsv "writing a csv"
+$1.to_csv('$2.csv', index=False)
+endsnippet
+
+snippet wpcsv "writing a csv with path"
+$1.to_csv(path.join($2, '$3.csv'), index=False)
+endsnippet
+
+snippet rsql
+$1 = pd.read_sql('$2', $3)
+endsnippet
+
+snippet rsql5
+$1 = pd.read_sql(
+	"""
+	SELECT TOP 5 *
+	FROM $2
+	""", $3)
+endsnippet
+
+snippet dfq "query a dataframe"
+$1.query("$2")
+endsnippet
+
+snippet dfloc "loc syntax"
+$1.loc[$1[$2]$3, $4]
+endsnippet
+

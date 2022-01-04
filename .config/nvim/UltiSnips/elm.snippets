@@ -1,0 +1,44 @@
+snippet ;ex "explain elm ui"
+Element.explain Debug.todo
+endsnippet
+
+snippet ;itw "tailwind imports"
+import Css
+import Html.Styled as Html exposing (..)
+import Html.Styled.Attributes as Attr exposing (css)
+import Tailwind.Breakpoints as Bp
+import Tailwind.Utilities as Tw
+endsnippet
+
+snippet ;twv "tailwind view"
+{ title = "$0"
+, body =
+	[ toUnstyled <|
+		div [ css [] ] []
+	]
+}
+endsnippet
+
+snippet ;div "div"
+div [ css [] ] []
+endsnippet
+
+snippet ;text "text"
+text "$0"
+endsnippet
+
+snippet ;center "center"
+Tw.flex
+, Tw.items_center
+, Tw.justify_center
+endsnippet
+
+snippet ;hover "hover"
+Css.hover []
+endsnippet
+
+snippet ;border "border"
+Tw.border
+, Tw.border_solid
+, Tw.border_red_900
+endsnippet
